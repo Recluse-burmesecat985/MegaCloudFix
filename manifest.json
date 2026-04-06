@@ -3,13 +3,27 @@
   "name": "MegaCloudFix",
   "version": "1.0",
   "description": "Redirects megacloud.blog requests to megacloud.tv",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "megacloudfix@local",
+      "strict_min_version": "91.0"
+    }
+  },
   "permissions": [
     "webRequest",
     "webRequestBlocking",
-    "*://*.megacloud.blog/*"
+    "<all_urls>"
   ],
   "background": {
     "scripts": ["background.js"],
     "persistent": true
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.aniwatchtv.to/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
 }
