@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "MegaCloudFix",
+  "version": "1.0",
+  "description": "Redirects megacloud.blog requests to megacloud.tv",
+  "permissions": ["declarativeNetRequest"],
+  "host_permissions": [
+    "*://*.megacloud.blog/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}
