@@ -1,6 +1,9 @@
-// Rules are handled declaratively in rules.json
-// This file is required as a service worker entry point
-
-chrome.runtime.onInstalled.addListener(() => {
-  console.log("MegaCloudFix: megacloud.blog → megacloud.tv redirect active.");
-});
+browser.webRequest.onBeforeRequest.addListener(
+  function (details) {
+    const url = new URL(details.url);
+    url.hostname = url.hostname.replace("megacloud.blog", "megacloud.tv");
+    return { redirectUrl: url.toString() };
+  },
+  { urls: ["*://*.megacloud.blog/*"] },
+  ["blocking"]
+);
