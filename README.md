@@ -39,6 +39,10 @@ Two layers of interception run simultaneously:
 
 No data is collected or transmitted.
 
+## Demo
+
+https://www.youtube.com/watch?v=0ynC183V27Q
+
 ## Firefox version
 
 A Firefox-specific version of this extension is available at [RAELIE1/MegaCloudFixFireFox](https://github.com/RAELIE1/MegaCloudFixFireFox).
