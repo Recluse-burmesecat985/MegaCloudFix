@@ -45,7 +45,7 @@ https://vimeo.com/1180787841?share=copy&fl=sv&fe=ci#t=0
 
 ## Mobile Demo
 
-https://youtube.com/shorts/9idHS_Ybmr4
+https://vimeo.com/1180947941?share=copy&fl=sv&fe=ci
 
 ## Firefox version
 
