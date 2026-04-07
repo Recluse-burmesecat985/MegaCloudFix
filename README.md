@@ -45,7 +45,7 @@ https://www.youtube.com/watch?v=0ynC183V27Q
 
 ## Mobile Demo
 
-https://youtube.com/shorts/7I6erx5yu64?feature=share
+https://youtube.com/shorts/9idHS_Ybmr4
 
 ## Firefox version
 
